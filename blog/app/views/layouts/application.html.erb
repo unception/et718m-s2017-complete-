@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "ET-718 Blog" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <header class="hero">
+      <h1>ET-718 Blog</h1>
+    </header>
+
+
+<div class= "row">
+    <%= yield %>
+  </div>
+
+  <footer class="footer">
+    <div class="row">
+      <div class="small-12 columns">
+        <p class="slogan">ET-718 Blog</p>
+        <p class="links">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">Pricing</a>
+          <a href="#">About</a>
+          <a href="#">Faq</a>
+          <a href="#">Contact</a>
+        </p>
+        <p class="copywrite">Copywrite EL © 2017</p>
+      </div>
+    </div>
+  </footer>
+
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
